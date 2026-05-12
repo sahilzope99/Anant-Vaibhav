@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Company</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #444;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .about {
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .product-sidebar {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+
+    .product-sidebar h3 {
+      margin-bottom: 20px;
+      color: #1f3a5f;
+    }
+
+    .product-sidebar ul {
+      list-style: none;
+    }
+
+    .product-sidebar li {
+      padding: 12px;
+      margin-bottom: 10px;
+      background: #f2f4f7;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .product-sidebar li:hover {
+      background: #1f3a5f;
+      color: white;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 25px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 10px;
+      color: #1f3a5f;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      background: #2c5364;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media(max-width: 900px) {
+      .product-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .product-sidebar {
+        position: relative;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Your Engineering Company</h1>
+  <p>Advanced Plastic Manufacturing & Industrial Solutions</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p class="about">
+    We are a trusted engineering company specializing in precision plastic manufacturing. Our expertise includes injection molding, industrial components, and custom product development. With a strong legacy of quality and innovation, we serve industries worldwide.
+  </p>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+
+  <div class="product-layout">
+
+    <div class="product-sidebar">
+      <h3>Product Catalog</h3>
+      <ul>
+        <li onclick="location.href='#product1'">Injection Molded Parts</li>
+        <li onclick="location.href='#product2'">Plastic Containers</li>
+        <li onclick="location.href='#product3'">Custom Manufacturing</li>
+        <li onclick="location.href='#product4'">Industrial Plastic Components</li>
+      </ul>
+    </div>
+
+    <div class="product-details">
+
+      <div class="product-card" id="product1">
+        <img src="https://via.placeholder.com/800x400" alt="Injection Molded Parts">
+        <div class="product-info">
+          <h3>Injection Molded Parts</h3>
+          <p>
+            High precision injection molded components manufactured using advanced engineering processes. Suitable for automotive, packaging, electrical, and industrial applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="product-card" id="product2">
+        <img src="https://via.placeholder.com/800x400" alt="Plastic Containers">
+        <div class="product-info">
+          <h3>Plastic Containers</h3>
+          <p>
+            Durable industrial-grade plastic containers designed for storage, transportation, and packaging solutions across multiple industries.
+          </p>
+        </div>
+      </div>
+
+      <div class="product-card" id="product3">
+        <img src="https://via.placeholder.com/800x400" alt="Custom Manufacturing">
+        <div class="product-info">
+          <h3>Custom Manufacturing</h3>
+          <p>
+            End-to-end custom plastic manufacturing services including design, tooling, molding, finishing, and quality inspection.
+          </p>
+        </div>
+      </div>
+
+      <div class="product-card" id="product4">
+        <img src="https://via.placeholder.com/800x400" alt="Industrial Components">
+        <div class="product-info">
+          <h3>Industrial Plastic Components</h3>
+          <p>
+            Precision-engineered industrial plastic components built for high durability, dimensional accuracy, and long operational life.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact-container">
+
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Company Info</h3>
+      <p>Email: info@yourcompany.com</p>
+      <p>Phone: +1 234 567 890</p>
+      <p>Location: Your City, Country</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Your Engineering Company | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
